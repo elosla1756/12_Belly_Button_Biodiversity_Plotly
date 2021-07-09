@@ -86,12 +86,15 @@ function buildCharts(sample) {
         type : "bar",
         orientation: "h",
         text : otu_labels.slice(0, 10).reverse(),
+        font : {family: "Georgia", size: 10, color: "#000000"},
     }
     ];
 
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-        title: "Top 10 Bacteria Cultures Found"
+        title: "Top 10 Bacteria Cultures Found",
+        font : {family: "Georgia", size: 14, color: "#000000"},
+        paper_bgcolor: "#F2F2F2",
     };
 
     // 10. Use Plotly to plot the data with the layout. 
@@ -103,10 +106,11 @@ function buildCharts(sample) {
       y: sample_values,
       mode : "markers",
       text: otu_labels,
+      font : {family: "Georgia", size: 14, color: "#000000"},
       marker: {
         size: sample_values,
         color: otu_ids,
-        colorscale: "Picnic",
+        colorscale: "Jet",
       },
   }];
 
@@ -115,6 +119,8 @@ function buildCharts(sample) {
       xaxis: {title: "OTU ID"},
       title: "Bacteria Cultures per Sample",
       automargin: true,
+      font : {family: "Georgia", size: 14, color: "#000000"},
+      paper_bgcolor: "#F2F2F2",
     };
 
     // 13. Use Plotly to plot the data with the layout.
@@ -138,6 +144,7 @@ function buildCharts(sample) {
       type: "indicator",
       mode: "gauge+number",
       title: {text: "<b> Belly Button Washing Frequency </b> <br></br> Scrubs Per Week"},
+      font : {family: "Georgia", size: 14, color: "#000000"},
       gauge: {
         axis: {range: [null,10], dtick: "2"},
         bar: {color: "black"},
@@ -155,7 +162,9 @@ function buildCharts(sample) {
     
     // 19. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      automargin: true
+      automargin: true,
+      font : {family: "Georgia", size: 14, color: "#000000"},
+      paper_bgcolor: "#F2F2F2",
     };
 
     // 20. Use Plotly to plot the gauge data and layout.
