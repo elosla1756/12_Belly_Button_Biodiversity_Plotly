@@ -1,6 +1,6 @@
   /* Styling & Adding a picture in the background of the jumbotron */
   .jumbotron {
-    background-image: url("../images/973913.jpg");
+    background-image: url("973913.jpg");
     background-size: 100% 100%;
     text-align: center;
     color: white;
