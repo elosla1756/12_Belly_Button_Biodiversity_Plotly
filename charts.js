@@ -106,7 +106,7 @@ function buildCharts(sample) {
       y: sample_values,
       mode : "markers",
       text: otu_labels,
-      font : {family: "Georgia", size: 14, color: "#000000"},
+      font : {family: "Georgia", size: 11, color: "#000000"},
       marker: {
         size: sample_values,
         color: otu_ids,
